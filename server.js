@@ -37,7 +37,7 @@ app.use("/api/updateinvoice", require("./routes/update.js"));
 app.use("/api/deleteinvoice", require("./routes/delete.js"));
 
 app.get("*", (req, res) => {
-  res.send("<h1>Error 404 page not found</h1>");
+  res.sendFile(path.join(__dirname, "dist/invoice.html"));
 });
 
 //port
