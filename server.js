@@ -32,9 +32,13 @@ app.use(bodyParser.json());
 
 //Rest API routes
 app.use("/api/createinvoice", require("./routes/create.js"));
-// app.use("/api/readinvoice", require("./routes/read.js"));
-// app.use("/api/updateinvoice", require("./routes/update.js"));
-// app.use("/api/deleteinvoice", require("./routes/delete.js"));
+app.use("/api/readinvoice", require("./routes/read.js"));
+app.use("/api/updateinvoice", require("./routes/update.js"));
+app.use("/api/deleteinvoice", require("./routes/delete.js"));
+
+app.get("*", (req, res) => {
+  res.send("<h1>Error 404 page not found</h1>");
+});
 
 //port
 app.listen(3000, () => {
