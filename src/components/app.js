@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <>
         <BrowserRouter>
-          <switch>
+          <Switch>
             <Route exact path="/">
               <LoadHomepage />
             </Route>
@@ -30,7 +30,7 @@ class App extends React.Component {
             <Route path="/allinvoice">
               <LoadAllInvoice />
             </Route>
-          </switch>
+          </Switch>
         </BrowserRouter>
       </>
     );
