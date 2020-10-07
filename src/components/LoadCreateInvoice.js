@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Layout from "./Layout";
 
-function LoadCreateInvoice() {
+export default function LoadCreateInvoice() {
   return (
     <div>
       <Jumbotron>
@@ -17,5 +17,3 @@ function LoadCreateInvoice() {
     </div>
   );
 }
-
-export default LoadCreateInvoice;

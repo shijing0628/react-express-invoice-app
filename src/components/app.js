@@ -6,9 +6,9 @@ import LoadDisplayInvoice from "./LoadDisplayInvoice";
 import LoadHomepage from "./LoadHomepage";
 import LoadUpdateInvoice from "./LoadUpdateInvoice";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+export default class App extends React.Component {
+  constructor() {
+    super();
   }
   render() {
     return (
@@ -36,5 +36,3 @@ class App extends React.Component {
     );
   }
 }
-
-export default App;
