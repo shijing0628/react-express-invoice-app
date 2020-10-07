@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Jumbotron from "react-bootstrap/Jumbotron";
+import { Card } from "react-bootstrap";
+import { Jumbotron } from "react-bootstrap";
 import Layout from "./Layout";
 
 function LoadCreateInvoice() {

@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
+import { Form } from "react-bootstrap";
 
 export default class CustomTextField extends React.Component {
   constructor(props) {
@@ -14,11 +14,12 @@ export default class CustomTextField extends React.Component {
           </Form.Label>
           <Form.Control
             type="text"
+            name={this.props.name}
             placeholder={this.props.placeholder}
             value={this.props.val}
             onChange={this.props.inputHandler}
-          />
-          <Form.text>{this.props.text}</Form.text>
+          ></Form.Control>
+          <Form.Text>{this.props.text}</Form.Text>
         </Form.Group>
       </>
     );

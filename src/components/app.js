@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import LoadAllInvoice from "./LoadAllInvoice";
 import LoadCreateInvoice from "./LoadCreateInvoice";
@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <>
         <BrowserRouter>
-          <switch>
+          <Switch>
             <Route exact path="/">
               <LoadHomepage />
             </Route>
@@ -30,7 +30,7 @@ class App extends React.Component {
             <Route path="/allinvoice">
               <LoadAllInvoice />
             </Route>
-          </switch>
+          </Switch>
         </BrowserRouter>
       </>
     );
