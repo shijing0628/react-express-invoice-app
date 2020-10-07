@@ -26,10 +26,12 @@
   "homepage": "https://github.com/shijing0628/react-express-invoice-app#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.2",
     "express": "^4.17.1",
     "mongoose": "^5.10.8",
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
   },
