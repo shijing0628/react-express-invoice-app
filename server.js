@@ -1,6 +1,7 @@
 //dependencies
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -31,10 +32,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //Rest API routes
-app.use("/api/createinvoice", require("./routes/create.js"));
-app.use("/api/readinvoice", require("./routes/read.js"));
-app.use("/api/updateinvoice", require("./routes/update.js"));
-app.use("/api/deleteinvoice", require("./routes/delete.js"));
+app.use("/api/createinvoice", cors(), require("./routes/create.js"));
+app.use("/api/readinvoice", cors(), require("./routes/read.js"));
+app.use("/api/updateinvoice", cors(), require("./routes/update.js"));
+app.use("/api/deleteinvoice", cors(), require("./routes/delete.js"));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "dist/invoice.html"));
