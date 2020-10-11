@@ -7,22 +7,34 @@ export default class CustomTextArea extends React.Component {
     super(props);
   }
   render() {
-    return (
-      <>
-        <InputGroup>
-          <InputGroup.Prepend>
-            <InputGroup.Text>
-              <h5> {this.props.label}</h5>
-            </InputGroup.Text>
-          </InputGroup.Prepend>
-          <Form.Control
-            as="textarea"
-            name={this.props.name}
-            value={this.props.val}
-            onChange={this.props.inputHandler}
-          />
-        </InputGroup>
-      </>
+    return ( <
+      >
+      <
+      InputGroup >
+      <
+      InputGroup.Prepend >
+      <
+      InputGroup.Text >
+      <
+      h5 > {
+        this.props.label
+      } < /h5> <
+      /InputGroup.Text> <
+      /InputGroup.Prepend> <
+      Form.Control as = "textarea"
+      name = {
+        this.props.name
+      }
+      value = {
+        this.props.val
+      }
+      onChange = {
+        this.props.inputHandler
+      }
+      /> <
+      h1 > < /h1> <
+      /InputGroup> <
+      />
     );
   }
 }

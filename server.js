@@ -12,9 +12,11 @@ app.use(express.static(path.join(__dirname, "dist")));
 //connect to mongodb
 mongoose.connect(
   "mongodb+srv://root:helloworld@" +
-    "invoicegeneratorapp.iulw1.mongodb.net/invoiceStorage?" +
-    "retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true }
+  "invoicegeneratorapp.iulw1.mongodb.net/invoiceStorage?" +
+  "retryWrites=true&w=majority", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }
 );
 
 mongoose.connection.on("error", (error) => {
@@ -27,7 +29,9 @@ mongoose.connection.once("open", () => {
 //body parser
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 // parse application/json
 app.use(bodyParser.json());
 
